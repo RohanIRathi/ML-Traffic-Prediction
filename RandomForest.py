@@ -24,17 +24,10 @@ onehotencoder = ColumnTransformer([('CodedDay', OneHotEncoder(), [2])], remainde
 X_train = onehotencoder.fit_transform(X_train).toarray()
 
 X_train[:, 3] = labelencoder_X.fit_transform(X_train[:, 3])
-# onehotencoder = OneHotEncoder(categorical_features = [3])
-# X_train = onehotencoder.fit_transform(X_train).toarray()
 
 X_train[:, 4] = labelencoder_X.fit_transform(X_train[:, 4])
-# onehotencoder = OneHotEncoder(categorical_features = [4])
-# X_train = onehotencoder.fit_transform(X_train).toarray()
 
 X_train[:, 5] = labelencoder_X.fit_transform(X_train[:, 5])
-# onehotencoder = OneHotEncoder(categorical_features = [5])
-# X_train = onehotencoder.fit_transform(X_train).toarray()
-
 
 # Encoding categorical data
 # Encoding the Independent Variable
@@ -44,18 +37,10 @@ onehotencoder = ColumnTransformer([('CodedDay', OneHotEncoder(), [2])], remainde
 X_test = onehotencoder.fit_transform(X_test).toarray()
 
 X_test[:, 3] = labelencoder_XY.fit_transform(X_test[:, 3])
-# onehotencoder = OneHotEncoder(categorical_features = [3])
-# X_test = onehotencoder.fit_transform(X_test).toarray()
 
 X_test[:, 4] = labelencoder_XY.fit_transform(X_test[:, 4])
-# onehotencoder = OneHotEncoder(categorical_features = [4])
-# X_test = onehotencoder.fit_transform(X_test).toarray()
 
 X_test[:, 5] = labelencoder_XY.fit_transform(X_test[:, 5])
-# onehotencoder = OneHotEncoder(categorical_features = [5])
-# X_test = onehotencoder.fit_transform(X_test).toarray()
-
-
 
 
 # Feature Scaling
