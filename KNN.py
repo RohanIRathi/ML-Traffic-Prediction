@@ -6,13 +6,13 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 
 # Importing the training dataset
-train_dataset = pd.read_csv('train_set.csv')
+train_dataset = pd.read_csv('train_data.csv')
 X_train = train_dataset.iloc[:, [2,3,4,5]].values
 y_train = train_dataset.iloc[:, 6].values
 
 
 # Importing the testing dataset
-test_dataset = pd.read_csv('test_set.csv')
+test_dataset = pd.read_csv('test_data.csv')
 X_test = test_dataset.iloc[:, [2,3,4,5]].values
 y_test = test_dataset.iloc[:, 6].values
 
